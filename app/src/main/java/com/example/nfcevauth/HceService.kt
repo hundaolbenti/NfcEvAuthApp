@@ -16,7 +16,7 @@ class HceService : HostApduService() {
         private const val OK = "9000"
     }
 
-    override fun onHostApduCommand(apdu: ByteArray, extras: Bundle?): ByteArray {
+    override fun processCommandApdu(apdu: ByteArray, extras: Bundle?): ByteArray {
         val hex = apdu.joinToString("") { "%02X".format(it) }
         return if (hex.startsWith(SELECT_PREFIX) || hex.startsWith(GET_CODE)) {
             (currentCode.toByteArray() + hexToBytes(OK))
