@@ -51,6 +51,15 @@ class UserActivity : AppCompatActivity() {
         poll(uid)
     }
 
+    private fun refresh(uid: String) {
+        thread {
+            try {
+                val me = Api.ev("my-profile") { put("user_id", uid) }
+                runOnUiThread { tvInfo.text = "Balance: %.3f kWh".format(me.optDouble("kwh_balance", 0.0)) }
+            } catch (e: Exception) { runOnUiThread { tvInfo.text = "Net: ${e.message}" } }
+        }
+    }
+
     private fun poll(uid: String) {
         if (!polling) return
         thread {
