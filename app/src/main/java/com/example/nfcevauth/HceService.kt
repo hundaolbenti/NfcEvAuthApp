@@ -16,6 +16,12 @@ class HceService : HostApduService() {
         private const val OK = "9000"
     }
 
+    override fun onCreate() {
+        super.onCreate()
+        // static phone token enrolled once at login — survives reboot, no codes to type
+        currentCode = getSharedPreferences("ev", MODE_PRIVATE).getString("phone_token", "") ?: ""
+    }
+
     override fun processCommandApdu(apdu: ByteArray, extras: Bundle?): ByteArray {
         val hex = apdu.joinToString("") { "%02X".format(it) }
         return if (hex.startsWith(SELECT_PREFIX) || hex.startsWith(GET_CODE)) {

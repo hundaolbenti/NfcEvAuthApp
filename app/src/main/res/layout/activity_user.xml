@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:padding="8dp" />
+        <Button android:id="@+id/btnRefresh" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Refresh" />
+        <Button android:id="@+id/btnStart" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Start charging (Bench-01)" />
+        <Button android:id="@+id/btnPhone" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Tap phone instead (HCE armed)" />
+        <Button android:id="@+id/btnStop" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Stop / Cancel" />
+        <Button android:id="@+id/btnLogout" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Logout" />
+    </LinearLayout>
+</ScrollView>

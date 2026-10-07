@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText android:id="@+id/etNewUser" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="username" />
+        <EditText android:id="@+id/etNewPass" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="password (default evdemo123)" />
+        <EditText android:id="@+id/etKwh" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="kWh amount" android:inputType="numberDecimal" />
+        <EditText android:id="@+id/etUid" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="card UID e.g. 6030F75C" />
+        <Button android:id="@+id/btnCreateUser" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Create user" />
+        <Button android:id="@+id/btnTopup" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Top up kWh" />
+        <Button android:id="@+id/btnEnrollCode" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Make enroll code for card" />
+        <Button android:id="@+id/btnAssign" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Assign card to user" />
+        <Button android:id="@+id/btnUnlink" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Unlink card" />
+        <Button android:id="@+id/btnLogout" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Logout" />
+        <TextView android:id="@+id/tvAdmin" android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="8dp" />
+    </LinearLayout>
+</ScrollView>
