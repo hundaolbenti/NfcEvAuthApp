@@ -46,7 +46,7 @@
             android:id="@+id/tvClaim"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Claim code appears here. Then on ESP32 serial: enroll <code>, tap blank card."
+            android:text="Claim code appears here. Then on ESP32 serial: enroll [code], tap blank card."
             android:padding="8dp" />
 
         <Button
@@ -59,7 +59,7 @@
             android:id="@+id/tvPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Phone code appears here. HCE serves it; or type it on ESP32: phone <code>"
+            android:text="Phone code appears here. HCE serves it; or type it on ESP32: phone [code]"
             android:padding="8dp" />
 
         <TextView
