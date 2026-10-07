@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Supabase URL"
+            android:text="https://ihtmnshkyskidewdxihd.supabase.co" />
+
+        <EditText
+            android:id="@+id/etSecret"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Device secret"
+            android:text="e5cdf7e607d4deeda663af8151d8a4ffae84" />
+
+        <EditText
+            android:id="@+id/etUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username" />
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <Button
+            android:id="@+id/btnCreatePending"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Create enroll code (admin)" />
+
+        <TextView
+            android:id="@+id/tvClaim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Claim code appears here. Then on ESP32 serial: enroll <code>, tap blank card."
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnGetPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Get phone pass (user)" />
+
+        <TextView
+            android:id="@+id/tvPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone code appears here. HCE serves it; or type it on ESP32: phone <code>"
+            android:padding="8dp" />
+
+        <TextView
+            android:id="@+id/tvLog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp" />
+    </LinearLayout>
+</ScrollView>

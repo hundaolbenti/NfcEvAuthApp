@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">NFC EV Auth</string>
+    <string name="hce_desc">EV auth phone pass</string>
+</resources>
