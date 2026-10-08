@@ -84,9 +84,11 @@ class UserActivity : AppCompatActivity() {
 
     private fun stopSession() {
         val sid = sessionId ?: return
+        val prefs = getSharedPreferences("ev", Context.MODE_PRIVATE)
+        val uid = prefs.getString("user_id", "")!!
         thread {
             try {
-                val r = Api.ev("stop") { put("session_id", sid); put("reason", "cancel") }
+                val r = Api.ev("stop") { put("session_id", sid); put("reason", "cancel"); put("user_id", uid) }
                 runOnUiThread { tvInfo.text = "Stopped. Used ${r.optDouble("kwh_used")} kWh"; sessionId = null }
             } catch (e: Exception) { runOnUiThread { tvInfo.text = "Net: ${e.message}" } }
         }
